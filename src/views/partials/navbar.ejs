@@ -1,0 +1,68 @@
+<nav
+  class="navbar"
+  style="background-color: #09012b; color: #fff"
+  role="navigation"
+  aria-label="main navigation"
+>
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="/images/icon.png" />
+    </a>
+
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="/" class="navbar-item"> Home </a>
+
+      <a class="navbar-item"> Documentation </a>
+
+      <a class="navbar-item"> About </a>
+      <a class="navbar-item"> Premium </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+            <% if(user) { %>
+              <!-- <a href="/auth/logout"><button class="button is-link is-rounded">Log Out</button> </a> -->
+              <div style="margin-right: 1.8cm;" class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                  <button class="button is-link is-rounded" aria-haspopup="true" aria-controls="dropdown-menu4">
+                    <span><%= user.username %></span>
+                    <span class="icon is-small">
+                      <img src="/images/drop.svg">
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                  <div style="background-color: rgb(29, 28, 94);" class="dropdown-content">
+                    <div  class="dropdown-item">
+                      <a href="/dashboard"><button class="button is-info ">Dashboard</button></a><br>
+                      <form action="/auth/logout">
+                        <button type="submit" class="button is-danger">Log Out </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% } else { %>
+              <a href="/auth/redirect"><button  class="button is-link is-rounded">Log In</button></a>
+            <% } %>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

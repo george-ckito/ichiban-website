@@ -1,0 +1,47 @@
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <img
+          src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%=
+        guild.icon %>.png"
+          ,
+          onerror="this.src =
+        'https:\/\/cdn.logojoy.com/wp-content/uploads/20210422095037/discord-mascot.png';"
+          id="guildIcon"
+        />
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p><strong><%= guild.name %></strong> <small><%= guild.id %></small></p>
+      </div>
+
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+<script>
+  function standby() {
+    document.getElementById("guildIcon").src =
+      "https://cdn.logojoy.com/wp-content/uploads/20210422095037/discord-mascot.png";
+  }
+</script>

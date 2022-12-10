@@ -1,0 +1,10 @@
+<%- include('partials/header') %> <%- include('partials/navbar') %>
+<div class="my-logout-button">
+  <form action="/auth/logout">
+    <button class="button is-primary is-rounded custom-button" type="submit">
+      Logout
+    </button>
+  </form>
+</div>
+<% user.guilds.forEach(guild => { %> <%- include('partials/guild', { guild })
+-%> <% }) %> <%- include('partials/footer') %>

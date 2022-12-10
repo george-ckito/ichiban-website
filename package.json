@@ -1,0 +1,26 @@
+{
+  "name": "Ichiban-Website",
+  "version": "1.0.0",
+  "description": "A website for a discord bot",
+  "main": "src/app.js",
+  "license": "MIT",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "glob": "^8.0.3",
+    "global": "^4.4.0",
+    "mongoose": "^6.8.0",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-discord": "^0.1.4",
+    "util": "^0.12.5"
+  },
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  }
+}
