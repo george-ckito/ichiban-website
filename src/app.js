@@ -50,3 +50,4 @@ app.listen(PORT, () => {
 app.get("/", (req, res, next) => {
   res.status(200).render("home", {user: req.user});
 });
+module.exports = app
